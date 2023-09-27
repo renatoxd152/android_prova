@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/textoLabel"
+        android:layout_width="121dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="28dp"
+        android:text="Texto a inserir:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/texto"
+        android:layout_width="393dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/grupoInput"
+        android:layout_width="405dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="364dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/corLabel"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/vermelhoInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vermelho"
+            android:tag="1"/>
+
+        <RadioButton
+            android:id="@+id/verdeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Verde"
+            android:tag="2"/>
+
+        <RadioButton
+            android:id="@+id/azulInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Azul"
+            android:tag="3"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/corLabel"
+        android:layout_width="295dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp"
+        android:text="Cor:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto" />
+
+    <Button
+        android:id="@+id/cancela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="128dp"
+        android:text="CANCELA"
+        android:onClick="primeiraTela"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupoInput" />
+
+    <Button
+        android:id="@+id/inserirTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Inserir"
+        android:onClick="inserirDados"
+        app:layout_constraintEnd_toStartOf="@+id/cancela"
+        app:layout_constraintHorizontal_bias="0.664"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grupoInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
